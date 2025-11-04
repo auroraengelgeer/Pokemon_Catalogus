@@ -6,15 +6,18 @@ function App() {
 
     return (
         <>
-            <header>
-                <h1 className="pokedex-title">Pokédex</h1>
-            </header>
             <main>
+                <header>
+                    <h1 className="pokedex-title">Pokédex</h1>
+                </header>
+
                 <section className="pokemon-card-overview">
                     <PokemonCard name="ditto"/>
                     <PokemonCard name="jigglypuff"/>
-                </section>
+                    <PokemonCard name="pikachu"/>
+                    <PokemonCard name="bulbasaur"/>
 
+                </section>
             </main>
         </>
     )
