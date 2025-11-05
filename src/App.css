@@ -11,4 +11,8 @@ header {
 .pokemon-card-overview {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.2em;
+    justify-content: center;
+
 }

@@ -37,20 +37,17 @@ function App() {
                 </ul>
 
                 <section className="pokemon-card-overview">
-                    <PokemonCard name="ditto"/>
-                    <PokemonCard name="jigglypuff"/>
-                    <PokemonCard name="pikachu"/>
-                    <PokemonCard name="bulbasaur"/>
+                    {pokemonList.map((pokemon) => (
+                        <PokemonCard key={pokemon.name} name={pokemon.name} />
+                    ))}
 
                 </section>
 
-                <ul>
-                    <li className="pokemon-name">
-                        {pokemonList.map((pokemon) => (
-                            <li key={pokemon.id}>{pokemon.name}</li>
-                        ))}
-                    </li>
-                </ul>
+                {/*<ul>*/}
+                {/*        {pokemonList.map((pokemon) => (*/}
+                {/*            <li key={pokemon.id}>{pokemon.name}</li>*/}
+                {/*        ))}*/}
+                {/*</ul>*/}
             </main>
         </>
     )
