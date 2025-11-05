@@ -30,12 +30,6 @@ function App() {
                     <h1 className="pokedex-title">Pokédex</h1>
                 </header>
 
-                <ul>
-                    <li>
-
-                    </li>
-                </ul>
-
                 <section className="pokemon-card-overview">
                     {pokemonList.map((pokemon) => (
                         <PokemonCard key={pokemon.name} name={pokemon.name} />
@@ -43,11 +37,6 @@ function App() {
 
                 </section>
 
-                {/*<ul>*/}
-                {/*        {pokemonList.map((pokemon) => (*/}
-                {/*            <li key={pokemon.id}>{pokemon.name}</li>*/}
-                {/*        ))}*/}
-                {/*</ul>*/}
             </main>
         </>
     )
