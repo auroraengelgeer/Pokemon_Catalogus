@@ -39,7 +39,7 @@ function PokemonCard({name}) {
 
     return (
         <>
-            <section className="pokemon-card">
+            <article className="pokemon-card">
                 <h1 className="pokemon-name">{pokemon.name}</h1>
                 <img
                     src={pokemon.sprites?.front_default}
@@ -54,10 +54,21 @@ function PokemonCard({name}) {
                     weight:
                     <div className="pokemon-property"> {pokemon.weight}</div>
                 </p>
-            </section>
+                <p className="abilities">
+                    Abilities:
+                    <ul className="pokemon-abilities-list"> {pokemon.abilities ? pokemon.abilities.slice(0, 3).map((abilityObj) => (
+                            <li className="pokemon-ability" key='abilityObj.ability.name'>
+                            {abilityObj.ability.name}
+                                {" "}
+                        </li>
+                        ))
+                        : <li>Geen abilities gevonden</li> }
+                    </ul>
+                </p>
+            </article>
         </>
     );
 }
-        
 
-    export default PokemonCard;
+
+export default PokemonCard;
