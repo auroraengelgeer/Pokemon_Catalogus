@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     border: #535bf2 1px solid;
+    box-shadow: 22px 18px 29px -7px rgba(99,105,105,0.69);
     background-color: #f9f9f9;
     border-radius: 10px;
     max-width: 250px;
