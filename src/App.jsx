@@ -11,9 +11,16 @@ function App() {
     const [previousUrl, setPreviousUrl] = useState(null);
 
     useEffect(() => {
+
+        const controller = new AbortController();
+
         async function getPokemonData() {
             try {
-                const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0');
+                const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0',
+                    {
+                        signal: controller.signal
+                    });
+
                 setPokemonList(response.data.results);
                 setNextUrl(response.data.next)
                 setPreviousUrl(response.data.previous)
@@ -24,6 +31,9 @@ function App() {
 
         getPokemonData();
 
+        return function cleanup() {
+            controller.abort();
+        }
     }, []);
 
     async function fetchNextPage() {
