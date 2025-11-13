@@ -1,1 +1,47 @@
-/*Schrijf hier jouw eigen CSS!*/
+/*!*Schrijf hier jouw eigen CSS!*!*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pokemon-card-overview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.2em;
+    justify-content: center;
+
+}
+
+.page-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.page-button {
+    background-color: #f9f9f9;
+    border: #535bf2 1px solid;
+    color: #535bf2;
+    margin: 0.5em;
+    width: 10em;
+
+}
+
+.page-button:hover:not(:disabled) {
+    background-color: #535bf2;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.page-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
